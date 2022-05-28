@@ -10,13 +10,15 @@ function add_to_cart() {
   let new_span = document.createElement('span');
   new_span.innerText = ' --- ';
 
+  new_li.appendChild(new_span2);
+  let new_span3 = document.createElement('span');
+  new_span3.innerText = ' £';
+  
   new_li.appendChild(new_span);
   let new_span2 = document.createElement('span');
   new_span2.innerText = itemCost;
 
-  new_li.appendChild(new_span2);
-  let new_span3 = document.createElement('span');
-  new_span3.innerText = ' £';
+
 
   new_li.appendChild(new_span3);
 
@@ -24,10 +26,11 @@ function add_to_cart() {
   numberOfItems = (typeof numberOfItems === 'number' ? numberOfItems : 0) + 1;
   let element_total_items = document.getElementById('total_items');
   element_total_items.innerText = numberOfItems;
-  let element_total_cost = document.getElementById('total_cost');
-  element_total_cost.innerText = totalCost;
   let new_span4 = document.createElement('span');
   new_span4.innerText = ' £';
+  let element_total_cost = document.getElementById('total_cost');
+  element_total_cost.innerText = totalCost;
+  
 
   element_total_cost.appendChild(new_span4);
 }
